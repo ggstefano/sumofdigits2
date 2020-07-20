@@ -1,0 +1,21 @@
+#include<stdio.h>
+int rec(int n)
+{
+    if(n<10)
+        return n;
+    else
+    {
+    int r;
+    r=n%10;
+    n=n-r;
+    n=n/10;
+    return (r+rec(n));
+    }
+}
+main()
+{
+    int x;
+    printf("Enter a Number-");
+    scanf("%d",&x);
+    printf("%d",rec(x));
+}
